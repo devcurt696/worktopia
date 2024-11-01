@@ -1,4 +1,4 @@
-@props(['id', 'name', 'label' => null])
+@props(['id', 'name', 'label' => null, 'required' => false])
 
 <div class="mb-4">
     @if($label)
@@ -11,5 +11,6 @@
         type="file"
         name="{{$name}}"
         class="w-full px-4 py-2 border rounded focus:outline-none"
+        {{$required ? 'required' : ''}}
     />
 </div>

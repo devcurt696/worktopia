@@ -167,7 +167,8 @@ class JobController extends Controller
                 $q->whereRaw('LOWER(address) LIKE ?', ["%{$location}%"])
                     ->orWhereRaw('LOWER(city) LIKE ?', ["%{$location}%"])
                     ->orWhereRaw('LOWER(state) LIKE ?', ["%{$location}%"])
-                    ->orWhereRaw('LOWER(zipcode) LIKE ?', ["%{$location}%"]);
+                    ->orWhereRaw('LOWER(zipcode) LIKE ?', ["%{$location}%"])
+                    ->orWhereRaw("CONCAT(LOWER(city), ', ', LOWER(state)) LIKE ?", ["%{$location}%"]);
             });
         }
 

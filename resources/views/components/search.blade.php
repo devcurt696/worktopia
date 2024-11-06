@@ -3,14 +3,15 @@
         type="text"
         name="keywords"
         placeholder="Keywords"
-        class="w-full md:w-72 px-4 py-3 focus:outline-none"
+        class="w-full md:w-72 mb-2 xs px-4 py-3 focus:outline-none"
         value="{{request('keywords')}}"
     />
+
     <input
         type="text"
         name="location"
         placeholder="Location"
-        class="w-full md:w-72 px-4 py-3 focus:outline-none"
+        class="w-full md:w-72 sm:border-black px-4 py-3 focus:outline-none"
         value="{{request('location')}}"
     />
     <button
